@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 1em;
+    line-height: 1.5;
+    height: 100vh;
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+
+/* left slide */
+.left-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 35%;
+    height: 100%;
+    transition: transform .8s ease-in-out;
+}
+
+.left-slide div {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.left-slide h1 {
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-top: -30px;
+}
+
+.left-slide div:nth-child(1) {
+    background-color: #fd3555;
+}
+
+.left-slide div:nth-child(2) {
+    background-color: #2a86ba;
+}
+
+.left-slide div:nth-child(3) {
+    background-color: #252E33;
+}
+
+.left-slide div:nth-child(4) {
+    background-color: #ffb866;
+}
+
+/* right slide */
+
+.right-slide {
+    position: absolute;
+    top: 0;
+    left: 35%;
+    height: 100%;
+    width: 65%;
+    transition: transform .8s ease-in-out;
+}
+
+
+.right-slide div:nth-child(1) {
+    background-image: url('https://source.unsplash.com/56BKTlZr7io');
+}
+
+.right-slide div:nth-child(2) {
+    background-image: url('https://source.unsplash.com/_7ZVqPBBHgc');
+}
+
+.right-slide div:nth-child(3) {
+    background-image: url('https://source.unsplash.com/gnxb59lGU1M');
+}
+
+.right-slide div:nth-child(4) {
+    background-image: url('https://source.unsplash.com/qq5BLeXD6ww');
+}
+
+.right-slide div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    background-color: rgba(255, 255, 255, 0.781);
+    color: rgb(138, 136, 136);
+    border: none;
+    padding: 0.8em;
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+button:hover {
+    color: #222;
+}
+
+button:focus {
+    outline: 0;
+}
+
+
+.slider-container .action-buttons button {
+    position: absolute;
+    left: 35%;
+    top: 50%;
+    z-index: 100;
+}
+
+
+
+.slider-container .action-buttons .down-button {
+    transform: translateX(-100%);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+
+}
+
+.slider-container .action-buttons .up-button {
+    transform: translateY(-100%);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
